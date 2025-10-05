@@ -1,0 +1,702 @@
+/* ===================================
+   RESPONSIVE STYLES
+   Mobile-First Approach with Media Queries
+   =================================== */
+
+/* ============ BASE MOBILE STYLES (320px - 767px) ============ */
+/* Default styles in other CSS files are mobile-first */
+
+/* ============ MOBILE SPECIFIC ADJUSTMENTS ============ */
+
+@media (max-width: 767px) {
+  /* Typography */
+  :root {
+    --navbar-height: var(--navbar-height-mobile);
+    --section-padding: var(--section-padding-mobile);
+  }
+  
+  /* Navigation */
+  .nav-menu {
+    position: fixed;
+    top: var(--navbar-height-mobile);
+    right: -100%;
+    width: 280px;
+    height: calc(100vh - var(--navbar-height-mobile));
+    background: rgba(10, 15, 13, 0.98);
+    backdrop-filter: blur(20px);
+    border-left: 1px solid var(--border-primary);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--spacing-xl);
+    gap: var(--spacing-md);
+    transition: right var(--duration-normal) var(--ease-out);
+    z-index: 100;
+    overflow-y: auto;
+  }
+  
+  .nav-menu.active {
+    right: 0;
+  }
+  
+  .nav-item {
+    width: 100%;
+  }
+  
+  .nav-link {
+    display: block;
+    width: 100%;
+    padding: var(--spacing-md);
+    font-size: var(--font-lg);
+    border-bottom: 1px solid var(--border-secondary);
+  }
+  
+  .nav-link::after {
+    display: none;
+  }
+  
+  .nav-link.active {
+    background: var(--glass-bg);
+    border-radius: var(--radius-lg);
+    border-bottom-color: transparent;
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    min-height: calc(100vh - var(--navbar-height-mobile));
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+    text-align: center;
+  }
+  
+  .hero-text {
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: var(--font-4xl);
+  }
+  
+  .hero-subtitle {
+    font-size: var(--font-xl);
+    min-height: 40px;
+  }
+  
+  .hero-description {
+    font-size: var(--font-base);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero-cta {
+    justify-content: center;
+  }
+  
+  .hero-cta .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .hero-card {
+    order: -1;
+  }
+  
+  .profile-card {
+    padding: var(--spacing-lg);
+  }
+  
+  .profile-placeholder {
+    width: 150px;
+    height: 150px;
+    font-size: var(--font-5xl);
+  }
+  
+  .profile-stats {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+  
+  /* Social Sidebar */
+  .social-sidebar {
+    left: var(--spacing-sm);
+  }
+  
+  .social-link {
+    width: 35px;
+    height: 35px;
+    font-size: var(--font-base);
+  }
+  
+  .social-line {
+    height: 60px;
+  }
+  
+  /* Scroll Indicator */
+  .scroll-indicator {
+    display: none;
+  }
+  
+  /* About Section */
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+  
+  .about-placeholder {
+    max-width: 300px;
+    font-size: var(--font-6xl);
+  }
+  
+  .fun-facts {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-actions {
+    justify-content: center;
+  }
+  
+  .about-actions .btn {
+    width: 100%;
+  }
+  
+  /* Skills Section */
+  .skills-filter {
+    gap: var(--spacing-sm);
+  }
+  
+  .filter-btn {
+    font-size: var(--font-xs);
+    padding: var(--spacing-xs) var(--spacing-md);
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .skill-card {
+    height: 320px;
+  }
+  
+  .skill-icon {
+    width: 80px;
+    height: 80px;
+    font-size: var(--font-5xl);
+  }
+  
+  .skill-name {
+    font-size: var(--font-xl);
+  }
+  
+  /* Awards Section */
+  .awards-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .award-icon {
+    font-size: var(--font-5xl);
+  }
+  
+  .award-title {
+    font-size: var(--font-xl);
+  }
+  
+  /* Projects Section */
+  .projects-filter {
+    gap: var(--spacing-sm);
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .project-image {
+    height: 200px;
+  }
+  
+  .project-placeholder {
+    font-size: var(--font-5xl);
+  }
+  
+  .project-title {
+    font-size: var(--font-lg);
+  }
+  
+  .project-actions {
+    flex-direction: column;
+  }
+  
+  .project-actions .btn {
+    width: 100%;
+  }
+  
+  /* Timeline */
+  .timeline-line {
+    left: 20px;
+  }
+  
+  .timeline-item:nth-child(even) .timeline-content {
+    flex-direction: row;
+    text-align: left;
+  }
+  
+  .timeline-item:nth-child(even) .timeline-card {
+    margin-left: var(--spacing-lg);
+    margin-right: 0;
+  }
+  
+  .timeline-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .timeline-icon {
+    width: 40px;
+    height: 40px;
+    font-size: var(--font-lg);
+    flex-shrink: 0;
+  }
+  
+  .timeline-card {
+    margin-left: var(--spacing-lg);
+    padding: var(--spacing-md);
+  }
+  
+  .timeline-title {
+    font-size: var(--font-lg);
+  }
+  
+  .timeline-subtitle {
+    font-size: var(--font-sm);
+  }
+  
+  .timeline-description {
+    font-size: var(--font-sm);
+  }
+  
+  .timeline-tags {
+    font-size: var(--font-xs);
+  }
+  
+  /* Contact Section */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  .contact-card {
+    padding: var(--spacing-lg);
+  }
+  
+  .contact-card-icon {
+    width: 60px;
+    height: 60px;
+    font-size: var(--font-3xl);
+  }
+  
+  .contact-card-title {
+    font-size: var(--font-lg);
+  }
+  
+  .contact-form-wrapper {
+    padding: var(--spacing-lg);
+  }
+  
+  .form-title {
+    font-size: var(--font-2xl);
+  }
+  
+  /* Modal */
+  .modal-content {
+    width: 95%;
+    max-height: 85vh;
+    padding: var(--spacing-lg);
+  }
+  
+  /* Scroll to Top */
+  .scroll-to-top {
+    width: 45px;
+    height: 45px;
+    bottom: var(--spacing-md);
+    right: var(--spacing-md);
+    font-size: var(--font-base);
+  }
+  
+  /* Footer */
+  .footer-social {
+    gap: var(--spacing-sm);
+  }
+  
+  .footer-social-link {
+    width: 40px;
+    height: 40px;
+    font-size: var(--font-lg);
+  }
+  
+  /* Hide custom cursor on mobile */
+  .cursor-dot,
+  .cursor-outline {
+    display: none;
+  }
+  
+  /* Touch-friendly tap targets */
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* ============ SMALL MOBILE (320px - 480px) ============ */
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: var(--font-3xl);
+  }
+  
+  .hero-subtitle {
+    font-size: var(--font-lg);
+  }
+  
+  .section-title {
+    font-size: var(--font-3xl);
+  }
+  
+  .profile-placeholder {
+    width: 120px;
+    height: 120px;
+    font-size: var(--font-4xl);
+  }
+  
+  .about-placeholder {
+    max-width: 250px;
+    font-size: var(--font-5xl);
+  }
+  
+  .contact-card-icon {
+    width: 50px;
+    height: 50px;
+    font-size: var(--font-2xl);
+  }
+}
+
+/* ============ TABLET STYLES (768px - 1023px) ============ */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Navigation - show full nav but smaller */
+  .nav-link {
+    font-size: var(--font-sm);
+  }
+  
+  /* Hero */
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .hero-text {
+    text-align: center;
+  }
+  
+  .hero-cta {
+    justify-content: center;
+  }
+  
+  /* About */
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+  
+  .fun-facts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Skills */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Awards */
+  .awards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Projects */
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Timeline */
+  .timeline-line {
+    left: 30px;
+  }
+  
+  .timeline-item:nth-child(even) .timeline-content {
+    flex-direction: row;
+    text-align: left;
+  }
+  
+  .timeline-item:nth-child(even) .timeline-card {
+    margin-left: var(--spacing-xl);
+    margin-right: 0;
+  }
+  
+  .timeline-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  /* Contact */
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ============ DESKTOP STYLES (1024px+) ============ */
+
+@media (min-width: 1024px) {
+  /* Full desktop styles - most are default in other CSS files */
+  
+  /* Container adjustments */
+  .container {
+    max-width: var(--container-lg);
+  }
+  
+  /* Hero optimizations */
+  .hero-content {
+    gap: var(--spacing-4xl);
+  }
+  
+  /* Skills - 3 columns */
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Awards - 3 columns */
+  .awards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Projects - 3 columns */
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Contact - 3 columns */
+  .contact-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Enable parallax effects */
+  .parallax {
+    will-change: transform;
+  }
+  
+  /* Enable 3D effects */
+  [data-tilt] {
+    transform-style: preserve-3d;
+  }
+}
+
+/* ============ LARGE DESKTOP (1280px+) ============ */
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: var(--container-xl);
+  }
+  
+  /* Increase spacing */
+  .section-padding {
+    padding-top: calc(var(--section-padding) * 1.2);
+    padding-bottom: calc(var(--section-padding) * 1.2);
+  }
+  
+  /* Projects - optional 4 columns if space permits */
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+}
+
+/* ============ EXTRA LARGE DESKTOP (1536px+) ============ */
+
+@media (min-width: 1536px) {
+  :root {
+    --font-base: 1.125rem; /* 18px */
+  }
+  
+  .container {
+    max-width: 1400px;
+  }
+  
+  /* Scale up hero */
+  .profile-placeholder {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .about-placeholder {
+    max-width: 500px;
+  }
+}
+
+/* ============ LANDSCAPE ORIENTATION ============ */
+
+@media (max-height: 600px) and (orientation: landscape) {
+  .hero-section {
+    min-height: auto;
+    padding: var(--spacing-2xl) 0;
+  }
+  
+  .profile-card {
+    display: none;
+  }
+  
+  .scroll-indicator {
+    display: none;
+  }
+  
+  .social-sidebar {
+    display: none;
+  }
+}
+
+/* ============ PRINT STYLES ============ */
+
+@media print {
+  /* Remove interactive elements */
+  .navbar,
+  .hamburger,
+  .social-sidebar,
+  .scroll-indicator,
+  .scroll-to-top,
+  .particles-background,
+  .cursor-dot,
+  .cursor-outline,
+  .loading-screen {
+    display: none !important;
+  }
+  
+  /* Optimize for print */
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .hero-section,
+  .about-section,
+  .skills-section,
+  .awards-section,
+  .projects-section,
+  .experience-section,
+  .contact-section {
+    page-break-inside: avoid;
+    background: white;
+  }
+  
+  /* Remove shadows and effects */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  /* Simplify colors */
+  .gradient-text,
+  .text-gradient {
+    -webkit-text-fill-color: inherit;
+    background: none;
+  }
+  
+  /* Show links */
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+  }
+}
+
+/* ============ TOUCH DEVICE OPTIMIZATIONS ============ */
+
+@media (hover: none) and (pointer: coarse) {
+  /* Disable hover effects on touch devices */
+  .card:hover,
+  .project-card:hover,
+  .skill-card:hover {
+    transform: none;
+  }
+  
+  /* Make tap targets larger */
+  button,
+  a,
+  .btn {
+    min-height: 48px;
+    min-width: 48px;
+  }
+  
+  /* Disable parallax on touch devices for performance */
+  .parallax {
+    transform: none !important;
+  }
+  
+  /* Simplify animations */
+  * {
+    animation-duration: 0.5s !important;
+  }
+}
+
+/* ============ HIGH DPI SCREENS (Retina) ============ */
+
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+  /* Optimize images and icons for retina displays */
+  /* Note: Implement with appropriate image sources */
+}
+
+/* ============ DARK MODE SUPPORT (Future Enhancement) ============ */
+
+@media (prefers-color-scheme: dark) {
+  /* Already optimized for dark mode by default */
+  /* Can add light mode alternative here if needed */
+}
+
+/* ============ REDUCED DATA MODE ============ */
+
+@media (prefers-reduced-data: reduce) {
+  /* Disable background effects */
+  .particles-background,
+  .gradient-orb {
+    display: none;
+  }
+  
+  /* Simplify animations */
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ============ CONTRAST MODE ============ */
+
+@media (prefers-contrast: high) {
+  :root {
+    --border-primary: rgba(16, 185, 129, 0.5);
+    --border-secondary: rgba(16, 185, 129, 0.3);
+  }
+  
+  .card,
+  .project-card,
+  .award-card {
+    border-width: 2px;
+  }
+}

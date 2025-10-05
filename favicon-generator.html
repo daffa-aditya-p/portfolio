@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favicon Generator</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Inter', sans-serif;
+      background: #0a0f0d;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      text-align: center;
+    }
+    canvas {
+      border: 2px solid #10b981;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    button {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    button:hover {
+      transform: scale(1.05);
+    }
+    .sizes {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .size-option {
+      background: rgba(16, 185, 129, 0.1);
+      padding: 8px 16px;
+      border-radius: 6px;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      cursor: pointer;
+    }
+    .size-option:hover {
+      background: rgba(16, 185, 129, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Favicon Generator</h1>
+    <p>Click to download favicon in different sizes</p>
+    
+    <canvas id="favicon" width="512" height="512"></canvas>
+    
+    <div class="sizes">
+      <div class="size-option" onclick="downloadFavicon(16)">16x16</div>
+      <div class="size-option" onclick="downloadFavicon(32)">32x32</div>
+      <div class="size-option" onclick="downloadFavicon(48)">48x48</div>
+      <div class="size-option" onclick="downloadFavicon(64)">64x64</div>
+      <div class="size-option" onclick="downloadFavicon(128)">128x128</div>
+      <div class="size-option" onclick="downloadFavicon(256)">256x256</div>
+      <div class="size-option" onclick="downloadFavicon(512)">512x512</div>
+    </div>
+    
+    <br><br>
+    <button onclick="downloadSVG()">Download SVG Favicon</button>
+  </div>
+
+  <script>
+    // Draw favicon on canvas
+    const canvas = document.getElementById('favicon');
+    const ctx = canvas.getContext('2d');
+    
+    function drawFavicon() {
+      // Background
+      const gradient = ctx.createLinearGradient(0, 0, 512, 512);
+      gradient.addColorStop(0, '#10b981');
+      gradient.addColorStop(1, '#059669');
+      
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, 512, 512);
+      
+      // Draw "DA" letters
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 280px Inter, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('DA', 256, 256);
+      
+      // Add subtle shadow for depth
+      ctx.shadowColor = 'rgba(0, 0, 0, 0.3)';
+      ctx.shadowBlur = 20;
+      ctx.shadowOffsetX = 0;
+      ctx.shadowOffsetY = 10;
+    }
+    
+    drawFavicon();
+    
+    function downloadFavicon(size) {
+      const tempCanvas = document.createElement('canvas');
+      tempCanvas.width = size;
+      tempCanvas.height = size;
+      const tempCtx = tempCanvas.getContext('2d');
+      
+      // Draw scaled version
+      tempCtx.drawImage(canvas, 0, 0, size, size);
+      
+      // Download
+      const link = document.createElement('a');
+      link.download = `favicon-${size}x${size}.png`;
+      link.href = tempCanvas.toDataURL('image/png');
+      link.click();
+    }
+    
+    function downloadSVG() {
+      const svg = `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <defs>
+            <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <rect width="512" height="512" fill="url(#grad)"/>
+          <text x="256" y="340" font-family="Inter, sans-serif" font-size="280" font-weight="bold" 
+                fill="white" text-anchor="middle">DA</text>
+        </svg>
+      `;
+      
+      const blob = new Blob([svg], { type: 'image/svg+xml' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.download = 'favicon.svg';
+      link.href = url;
+      link.click();
+      URL.revokeObjectURL(url);
+    }
+  </script>
+</body>
+</html>

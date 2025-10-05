@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>Daffa Aditya Pratama - Full Stack Developer & AI Enthusiast</title>
+    <meta name="description" content="Portfolio of Daffa Aditya Pratama - Full Stack Developer specializing in JavaScript, Python, AI/ML, and Web Development. Building innovative digital experiences.">
+    <meta name="keywords" content="Daffa Aditya Pratama, Full Stack Developer, Web Developer, AI Developer, JavaScript, Python, Portfolio">
+    <meta name="author" content="Daffa Aditya Pratama">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://daffadev.my.id/">
+    <meta property="og:title" content="Daffa Aditya Pratama - Full Stack Developer & AI Enthusiast">
+    <meta property="og:description" content="Portfolio of Daffa Aditya Pratama - Full Stack Developer specializing in JavaScript, Python, AI/ML, and Web Development.">
+    <meta property="og:image" content="/assets/og-image.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://daffadev.my.id/">
+    <meta property="twitter:title" content="Daffa Aditya Pratama - Full Stack Developer & AI Enthusiast">
+    <meta property="twitter:description" content="Portfolio of Daffa Aditya Pratama - Full Stack Developer specializing in JavaScript, Python, AI/ML, and Web Development.">
+    <meta property="twitter:image" content="/assets/og-image.jpg">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#10b981">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- Preconnect to CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Google Fonts - Inter & Clash Display Alternative (Using Montserrat for display) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- AOS - Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS Files -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">DA</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p class="loading-text">Loading Experience...</p>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-text">DA</span>
+            </a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#awards" class="nav-link">Awards</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div id="particles-js" class="particles-background"></div>
+            
+            <div class="hero-content">
+                <div class="hero-text" data-aos="fade-up" data-aos-duration="1000">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Daffa Aditya Pratama</span>
+                    </h1>
+                    <div class="hero-subtitle">
+                        <span class="typed-text" id="typed-text"></span>
+                        <span class="cursor-blink">|</span>
+                    </div>
+                    <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
+                        Building innovative digital experiences with cutting-edge technology
+                    </p>
+                    <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
+                        <a href="#projects" class="btn btn-primary btn-large">
+                            <span>View My Work</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-outline btn-large">
+                            <span>Get In Touch</span>
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-card" data-aos="fade-left" data-aos-delay="600" data-tilt>
+                    <div class="profile-card">
+                        <div class="profile-image">
+                            <div class="profile-placeholder">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="profile-status">
+                                <span class="status-dot"></span>
+                                <span class="status-text">Available for work</span>
+                            </div>
+                        </div>
+                        <div class="profile-info">
+                            <h3 class="profile-name">Daffa Aditya Pratama</h3>
+                            <p class="profile-role">Full Stack Developer</p>
+                            <div class="profile-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value" data-count="5">0</span>
+                                    <span class="stat-label">Years Experience</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value" data-count="20">0</span>
+                                    <span class="stat-label">Projects Done</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value" data-count="3">0</span>
+                                    <span class="stat-label">Awards Won</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="social-sidebar" data-aos="fade-right" data-aos-delay="800">
+                <a href="https://github.com/daffaaditya" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/daffaaditya" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://instagram.com/daffaaditya" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://youtube.com/@daffaaditya" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <div class="social-line"></div>
+            </div>
+            
+            <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1000">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <p>Scroll Down</p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-label">Get To Know Me</span>
+                    <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-image" data-aos="fade-right" data-aos-delay="200">
+                        <div class="about-image-wrapper">
+                            <div class="about-placeholder">
+                                <div class="geometric-shape shape-1"></div>
+                                <div class="geometric-shape shape-2"></div>
+                                <div class="geometric-shape shape-3"></div>
+                                <i class="fas fa-code"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-text" data-aos="fade-left" data-aos-delay="400">
+                        <h3 class="about-heading">Full Stack Developer & Tech Enthusiast</h3>
+                        <p class="about-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <p class="about-description">
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                        
+                        <div class="fun-facts">
+                            <div class="fact-item" data-aos="zoom-in" data-aos-delay="500">
+                                <i class="fas fa-code"></i>
+                                <div class="fact-content">
+                                    <span class="fact-number" data-count="10000">0</span>
+                                    <span class="fact-label">Lines of Code</span>
+                                </div>
+                            </div>
+                            <div class="fact-item" data-aos="zoom-in" data-aos-delay="600">
+                                <i class="fas fa-coffee"></i>
+                                <div class="fact-content">
+                                    <span class="fact-number" data-count="500">0</span>
+                                    <span class="fact-label">Cups of Coffee</span>
+                                </div>
+                            </div>
+                            <div class="fact-item" data-aos="zoom-in" data-aos-delay="700">
+                                <i class="fas fa-clock"></i>
+                                <div class="fact-content">
+                                    <span class="fact-number" data-count="5000">0</span>
+                                    <span class="fact-label">Hours Coding</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="about-actions" data-aos="fade-up" data-aos-delay="800">
+                            <a href="#contact" class="btn btn-primary">
+                                <span>Contact Me</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </a>
+                            <a href="/assets/cv.pdf" download class="btn btn-outline">
+                                <span>Download CV</span>
+                                <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section section-padding">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-label">What I Do</span>
+                    <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="skills-filter" data-aos="fade-up" data-aos-delay="200">
+                    <button class="filter-btn active" data-filter="all">
+                        All Skills
+                        <span class="filter-count">5</span>
+                    </button>
+                    <button class="filter-btn" data-filter="frontend">
+                        Frontend
+                        <span class="filter-count">3</span>
+                    </button>
+                    <button class="filter-btn" data-filter="backend">
+                        Backend
+                        <span class="filter-count">1</span>
+                    </button>
+                    <button class="filter-btn" data-filter="ai">
+                        AI/ML
+                        <span class="filter-count">1</span>
+                    </button>
+                    <button class="filter-btn" data-filter="hardware">
+                        Hardware
+                        <span class="filter-count">1</span>
+                    </button>
+                </div>
+                
+                <div class="skills-grid">
+                    <!-- JavaScript -->
+                    <div class="skill-card" data-category="frontend" data-aos="flip-left" data-aos-delay="300" data-tilt>
+                        <div class="skill-card-inner">
+                            <div class="skill-card-front">
+                                <div class="skill-icon">
+                                    <i class="fab fa-js"></i>
+                                </div>
+                                <h3 class="skill-name">JavaScript</h3>
+                                <div class="skill-level">
+                                    <svg class="circular-progress" width="120" height="120">
+                                        <circle class="progress-bg" cx="60" cy="60" r="54"></circle>
+                                        <circle class="progress-bar" cx="60" cy="60" r="54" data-progress="90"></circle>
+                                    </svg>
+                                    <div class="progress-text">90%</div>
+                                </div>
+                            </div>
+                            <div class="skill-card-back">
+                                <h3 class="skill-name">JavaScript</h3>
+                                <p class="skill-description">
+                                    Modern ES6+ JavaScript for building dynamic web applications, APIs, and interactive user interfaces.
+                                </p>
+                                <ul class="skill-technologies">
+                                    <li>ES6+</li>
+                                    <li>Node.js</li>
+                                    <li>React</li>
+                                    <li>Vue.js</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Python -->
+                    <div class="skill-card" data-category="backend ai" data-aos="flip-left" data-aos-delay="400" data-tilt>
+                        <div class="skill-card-inner">
+                            <div class="skill-card-front">
+                                <div class="skill-icon">
+                                    <i class="fab fa-python"></i>
+                                </div>
+                                <h3 class="skill-name">Python</h3>
+                                <div class="skill-level">
+                                    <svg class="circular-progress" width="120" height="120">
+                                        <circle class="progress-bg" cx="60" cy="60" r="54"></circle>
+                                        <circle class="progress-bar" cx="60" cy="60" r="54" data-progress="85"></circle>
+                                    </svg>
+                                    <div class="progress-text">85%</div>
+                                </div>
+                            </div>
+                            <div class="skill-card-back">
+                                <h3 class="skill-name">Python</h3>
+                                <p class="skill-description">
+                                    Backend development, data science, and AI/ML projects using Python frameworks and libraries.
+                                </p>
+                                <ul class="skill-technologies">
+                                    <li>Django</li>
+                                    <li>Flask</li>
+                                    <li>TensorFlow</li>
+                                    <li>Pandas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- HTML & CSS -->
+                    <div class="skill-card" data-category="frontend" data-aos="flip-left" data-aos-delay="500" data-tilt>
+                        <div class="skill-card-inner">
+                            <div class="skill-card-front">
+                                <div class="skill-icon">
+                                    <i class="fab fa-html5"></i>
+                                </div>
+                                <h3 class="skill-name">HTML & CSS</h3>
+                                <div class="skill-level">
+                                    <svg class="circular-progress" width="120" height="120">
+                                        <circle class="progress-bg" cx="60" cy="60" r="54"></circle>
+                                        <circle class="progress-bar" cx="60" cy="60" r="54" data-progress="95"></circle>
+                                    </svg>
+                                    <div class="progress-text">95%</div>
+                                </div>
+                            </div>
+                            <div class="skill-card-back">
+                                <h3 class="skill-name">HTML & CSS</h3>
+                                <p class="skill-description">
+                                    Semantic HTML5 and modern CSS3 with animations, responsive design, and accessibility best practices.
+                                </p>
+                                <ul class="skill-technologies">
+                                    <li>HTML5</li>
+                                    <li>CSS3</li>
+                                    <li>SASS/SCSS</li>
+                                    <li>Tailwind</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- AI & Machine Learning -->
+                    <div class="skill-card" data-category="ai" data-aos="flip-left" data-aos-delay="600" data-tilt>
+                        <div class="skill-card-inner">
+                            <div class="skill-card-front">
+                                <div class="skill-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <h3 class="skill-name">AI & ML</h3>
+                                <div class="skill-level">
+                                    <svg class="circular-progress" width="120" height="120">
+                                        <circle class="progress-bg" cx="60" cy="60" r="54"></circle>
+                                        <circle class="progress-bar" cx="60" cy="60" r="54" data-progress="75"></circle>
+                                    </svg>
+                                    <div class="progress-text">75%</div>
+                                </div>
+                            </div>
+                            <div class="skill-card-back">
+                                <h3 class="skill-name">AI & Machine Learning</h3>
+                                <p class="skill-description">
+                                    Building intelligent systems with machine learning algorithms, neural networks, and AI models.
+                                </p>
+                                <ul class="skill-technologies">
+                                    <li>TensorFlow</li>
+                                    <li>PyTorch</li>
+                                    <li>Scikit-learn</li>
+                                    <li>OpenAI</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Arduino -->
+                    <div class="skill-card" data-category="hardware" data-aos="flip-left" data-aos-delay="700" data-tilt>
+                        <div class="skill-card-inner">
+                            <div class="skill-card-front">
+                                <div class="skill-icon">
+                                    <i class="fas fa-microchip"></i>
+                                </div>
+                                <h3 class="skill-name">Arduino</h3>
+                                <div class="skill-level">
+                                    <svg class="circular-progress" width="120" height="120">
+                                        <circle class="progress-bg" cx="60" cy="60" r="54"></circle>
+                                        <circle class="progress-bar" cx="60" cy="60" r="54" data-progress="80"></circle>
+                                    </svg>
+                                    <div class="progress-text">80%</div>
+                                </div>
+                            </div>
+                            <div class="skill-card-back">
+                                <h3 class="skill-name">Arduino</h3>
+                                <p class="skill-description">
+                                    IoT and hardware programming with Arduino for embedded systems and robotics projects.
+                                </p>
+                                <ul class="skill-technologies">
+                                    <li>Arduino IDE</li>
+                                    <li>ESP32</li>
+                                    <li>Sensors</li>
+                                    <li>IoT</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards Section -->
+        <section id="awards" class="awards-section section-padding">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-label">Achievements</span>
+                    <h2 class="section-title">Awards & <span class="gradient-text">Recognition</span></h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="awards-grid">
+                    <!-- Award 1 -->
+                    <div class="award-card bronze" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="award-glow"></div>
+                        <div class="award-icon">
+                            <i class="fas fa-trophy"></i>
+                            <div class="award-particles"></div>
+                        </div>
+                        <div class="award-content">
+                            <span class="award-rank">3rd Place</span>
+                            <h3 class="award-title">Juara 3 OTN Nasional</h3>
+                            <p class="award-description">
+                                National technology competition showcasing innovation and technical excellence
+                            </p>
+                            <div class="award-badge">
+                                <i class="fas fa-medal"></i>
+                                <span>National Level</span>
+                            </div>
+                        </div>
+                        <div class="award-shine"></div>
+                    </div>
+                    
+                    <!-- Award 2 -->
+                    <div class="award-card gold" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="award-glow"></div>
+                        <div class="award-icon">
+                            <i class="fas fa-trophy"></i>
+                            <div class="award-particles"></div>
+                        </div>
+                        <div class="award-content">
+                            <span class="award-rank">Best Award</span>
+                            <h3 class="award-title">Best Non-Academic Award</h3>
+                            <p class="award-description">
+                                Recognition for outstanding achievements beyond academic excellence
+                            </p>
+                            <div class="award-badge">
+                                <i class="fas fa-star"></i>
+                                <span>Excellence</span>
+                            </div>
+                        </div>
+                        <div class="award-shine"></div>
+                    </div>
+                    
+                    <!-- Award 3 -->
+                    <div class="award-card special" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="award-glow"></div>
+                        <div class="award-icon">
+                            <i class="fas fa-trophy"></i>
+                            <div class="award-particles"></div>
+                        </div>
+                        <div class="award-content">
+                            <span class="award-rank">Special Recognition</span>
+                            <h3 class="award-title">Force of 46</h3>
+                            <p class="award-description">
+                                Special honor recognizing exceptional contribution and leadership
+                            </p>
+                            <div class="award-badge">
+                                <i class="fas fa-certificate"></i>
+                                <span>Honor</span>
+                            </div>
+                        </div>
+                        <div class="award-shine"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section section-padding">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-label">My Work</span>
+                    <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="projects-filter" data-aos="fade-up" data-aos-delay="200">
+                    <button class="filter-btn active" data-filter="all">
+                        All Projects
+                        <span class="filter-count">3</span>
+                    </button>
+                    <button class="filter-btn" data-filter="web">
+                        Web Development
+                        <span class="filter-count">3</span>
+                    </button>
+                    <button class="filter-btn" data-filter="cms">
+                        CMS Development
+                        <span class="filter-count">1</span>
+                    </button>
+                    <button class="filter-btn" data-filter="frontend">
+                        Frontend
+                        <span class="filter-count">2</span>
+                    </button>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card" data-category="web cms" data-aos="fade-up" data-aos-delay="300">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <div class="project-gradient"></div>
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <button class="project-view-btn" data-project="1">
+                                    <i class="fas fa-eye"></i>
+                                    <span>View Details</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Website Ligazone 3 SMP Negeri 109 Jakarta</h3>
+                            <p class="project-description">
+                                Comprehensive website for annual school event, built with WordPress CMS providing easy content management.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">WordPress</span>
+                                <span class="tech-tag">CMS</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-primary btn-small" data-project="1">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span>Details</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-card featured" data-category="web frontend" data-aos="fade-up" data-aos-delay="400">
+                        <div class="featured-badge">
+                            <i class="fas fa-star"></i>
+                            <span>Featured</span>
+                        </div>
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <div class="project-gradient"></div>
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <a href="https://ospk47.my.id" target="_blank" rel="noopener noreferrer" class="project-view-btn">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>Visit Website</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Website OSPK47 SMP Negeri 109 Jakarta</h3>
+                            <p class="project-description">
+                                Official website for OSIS MPK Angkatan 47 with modern tech stack and real-time features powered by Firebase.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Firebase</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://ospk47.my.id" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>Live Preview</span>
+                                </a>
+                                <button class="btn btn-outline btn-small" data-project="2">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span>Details</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="project-card" data-category="web frontend" data-aos="fade-up" data-aos-delay="500">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <div class="project-gradient"></div>
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <button class="project-view-btn" data-project="3">
+                                    <i class="fas fa-eye"></i>
+                                    <span>View Details</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Website Ligazone 3 (Modern Stack)</h3>
+                            <p class="project-description">
+                                Redesigned with modern frameworks including Bootstrap and Tailwind CSS for enhanced UI/UX experience.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Bootstrap</span>
+                                <span class="tech-tag">Tailwind</span>
+                                <span class="tech-tag">Font Awesome</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-primary btn-small" data-project="3">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span>Details</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience / Education Timeline Section -->
+        <section id="experience" class="experience-section section-padding">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-label">My Journey</span>
+                    <h2 class="section-title">Education & <span class="gradient-text">Experience</span></h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-line" id="timeline-line"></div>
+                    
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+                        <div class="timeline-content">
+                            <div class="timeline-icon">
+                                <i class="fas fa-school"></i>
+                            </div>
+                            <div class="timeline-card">
+                                <span class="timeline-date">2016 - 2021</span>
+                                <h3 class="timeline-title">SD Negeri Jatiwaringin 6 Bekasi</h3>
+                                <p class="timeline-description">
+                                    Foundation of my education journey, developing basic skills and discovering my interest in technology and problem-solving.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span class="tag">Elementary School</span>
+                                    <span class="tag">Foundation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item" data-aos="fade-left" data-aos-delay="400">
+                        <div class="timeline-content">
+                            <div class="timeline-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="timeline-card">
+                                <span class="timeline-date">2021 - 2025</span>
+                                <h3 class="timeline-title">SMP Negeri 109 Jakarta</h3>
+                                <p class="timeline-description">
+                                    Developed strong interest in technology, participated in coding competitions, and started building real-world projects including OSPK47 website.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span class="tag">Junior High School</span>
+                                    <span class="tag">Tech Development</span>
+                                    <span class="tag">Projects</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 3 - Current -->
+                    <div class="timeline-item current" data-aos="fade-right" data-aos-delay="600">
+                        <div class="timeline-content">
+                            <div class="timeline-icon">
+                                <i class="fas fa-laptop-code"></i>
+                                <span class="pulse-ring"></span>
+                            </div>
+                            <div class="timeline-card">
+                                <span class="timeline-date">2025 - Present</span>
+                                <div class="current-badge">
+                                    <i class="fas fa-circle"></i>
+                                    <span>Current</span>
+                                </div>
+                                <h3 class="timeline-title">SMK Negeri 26 Jakarta</h3>
+                                <h4 class="timeline-subtitle">Major: SIJA (Sistem Informasi, Jaringan dan Aplikasi)</h4>
+                                <p class="timeline-description">
+                                    Deepening my expertise in Information Systems, Networking, and Application Development. Learning advanced web technologies, system administration, and network infrastructure.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span class="tag">Vocational School</span>
+                                    <span class="tag">IT Specialist</span>
+                                    <span class="tag">SIJA Major</span>
+                                    <span class="tag tag-active">In Progress</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="contact-background">
+                <div class="gradient-orb orb-1"></div>
+                <div class="gradient-orb orb-2"></div>
+                <div class="gradient-orb orb-3"></div>
+            </div>
+            
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-label">Get In Touch</span>
+                    <h2 class="section-title">Let's Build Something <span class="gradient-text">Together</span></h2>
+                    <div class="section-divider"></div>
+                    <p class="section-description">
+                        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                    </p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-grid">
+                        <!-- GitHub -->
+                        <a href="https://github.com/daffaaditya" target="_blank" rel="noopener noreferrer" class="contact-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="contact-card-icon github">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <h3 class="contact-card-title">GitHub</h3>
+                            <p class="contact-card-text">@daffaaditya</p>
+                            <div class="contact-card-overlay"></div>
+                        </a>
+                        
+                        <!-- YouTube -->
+                        <a href="https://youtube.com/@daffaaditya" target="_blank" rel="noopener noreferrer" class="contact-card" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="contact-card-icon youtube">
+                                <i class="fab fa-youtube"></i>
+                            </div>
+                            <h3 class="contact-card-title">YouTube</h3>
+                            <p class="contact-card-text">@daffaaditya</p>
+                            <div class="contact-card-overlay"></div>
+                        </a>
+                        
+                        <!-- LinkedIn -->
+                        <a href="https://linkedin.com/in/daffaaditya" target="_blank" rel="noopener noreferrer" class="contact-card" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="contact-card-icon linkedin">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <h3 class="contact-card-title">LinkedIn</h3>
+                            <p class="contact-card-text">/in/daffaaditya</p>
+                            <div class="contact-card-overlay"></div>
+                        </a>
+                        
+                        <!-- Instagram -->
+                        <a href="https://instagram.com/daffaaditya" target="_blank" rel="noopener noreferrer" class="contact-card" data-aos="zoom-in" data-aos-delay="500">
+                            <div class="contact-card-icon instagram">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <h3 class="contact-card-title">Instagram</h3>
+                            <p class="contact-card-text">@daffaaditya</p>
+                            <div class="contact-card-overlay"></div>
+                        </a>
+                        
+                        <!-- TikTok -->
+                        <a href="https://tiktok.com/@daffaaditya" target="_blank" rel="noopener noreferrer" class="contact-card" data-aos="zoom-in" data-aos-delay="600">
+                            <div class="contact-card-icon tiktok">
+                                <i class="fab fa-tiktok"></i>
+                            </div>
+                            <h3 class="contact-card-title">TikTok</h3>
+                            <p class="contact-card-text">@daffaaditya</p>
+                            <div class="contact-card-overlay"></div>
+                        </a>
+                        
+                        <!-- Email -->
+                        <a href="mailto:daffaaditya@daffadev.my.id" class="contact-card" data-aos="zoom-in" data-aos-delay="700">
+                            <div class="contact-card-icon email">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3 class="contact-card-title">Email</h3>
+                            <p class="contact-card-text">daffaaditya@daffadev.my.id</p>
+                            <div class="contact-card-overlay"></div>
+                        </a>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div class="contact-form-wrapper" data-aos="fade-up" data-aos-delay="800">
+                        <h3 class="form-title">Send Me a Message</h3>
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" id="name" name="name" class="form-input" required>
+                                <span class="form-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Your Email</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                                <span class="form-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="form-label">Your Message</label>
+                                <textarea id="message" name="message" class="form-input form-textarea" rows="5" required></textarea>
+                                <span class="form-error"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-large btn-full">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                            <div class="form-message"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">DA</span>
+                </div>
+                <p class="footer-text">
+                    Building the future, one line of code at a time.
+                </p>
+                <div class="footer-social">
+                    <a href="https://github.com/daffaaditya" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/daffaaditya" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://instagram.com/daffaaditya" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://youtube.com/@daffaaditya" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://tiktok.com/@daffaaditya" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+                <p class="footer-copyright">
+                    &copy; 2025 Daffa Aditya Pratama. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll To Top Button -->
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="modal-body" class="modal-body">
+                <!-- Content will be dynamically loaded -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    
+    <!-- AOS - Animate On Scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
+    <!-- Vanilla Tilt.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+    
+    <!-- Custom JavaScript Files -->
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/particles-config.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/interactions.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

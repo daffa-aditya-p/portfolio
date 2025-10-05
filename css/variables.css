@@ -1,0 +1,233 @@
+/* ===================================
+   CSS VARIABLES - DESIGN TOKENS
+   Color System, Spacing, Typography
+   =================================== */
+
+:root {
+  /* ============ COLOR PALETTE ============ */
+  
+  /* Primary Green Shades */
+  --color-primary: #10b981;
+  --color-primary-light: #34d399;
+  --color-primary-lighter: #6ee7b7;
+  --color-primary-dark: #059669;
+  --color-primary-darker: #047857;
+  
+  /* Secondary Green Shades */
+  --color-secondary: #22c55e;
+  --color-secondary-light: #4ade80;
+  --color-secondary-dark: #16a34a;
+  
+  /* Accent Colors */
+  --color-accent-mint: #5eead4;
+  --color-accent-emerald: #10b981;
+  --color-accent-lime: #84cc16;
+  --color-accent-teal: #14b8a6;
+  
+  /* Neutral Colors - Dark Theme */
+  --color-bg-primary: #0a0f0d;
+  --color-bg-secondary: #0f1613;
+  --color-bg-tertiary: #151f1b;
+  --color-bg-card: rgba(16, 185, 129, 0.03);
+  --color-bg-card-hover: rgba(16, 185, 129, 0.08);
+  
+  /* Text Colors */
+  --color-text-primary: #f0fdf4;
+  --color-text-secondary: #dcfce7;
+  --color-text-tertiary: #bbf7d0;
+  --color-text-muted: #86efac;
+  --color-text-disabled: #4ade80;
+  
+  /* Gradient Colors */
+  --gradient-primary: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  --gradient-secondary: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+  --gradient-accent: linear-gradient(135deg, #5eead4 0%, #10b981 50%, #84cc16 100%);
+  --gradient-hero: linear-gradient(180deg, #0a0f0d 0%, #0f1613 50%, #151f1b 100%);
+  --gradient-card: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.05) 100%);
+  
+  /* Glass Morphism */
+  --glass-bg: rgba(16, 185, 129, 0.05);
+  --glass-border: rgba(16, 185, 129, 0.1);
+  --glass-blur: 20px;
+  
+  /* Shadow Colors */
+  --shadow-sm: 0 2px 4px rgba(16, 185, 129, 0.1);
+  --shadow-md: 0 4px 6px rgba(16, 185, 129, 0.15);
+  --shadow-lg: 0 10px 20px rgba(16, 185, 129, 0.2);
+  --shadow-xl: 0 20px 40px rgba(16, 185, 129, 0.25);
+  --shadow-glow: 0 0 20px rgba(16, 185, 129, 0.3);
+  --shadow-glow-strong: 0 0 40px rgba(16, 185, 129, 0.5);
+  
+  /* Border Colors */
+  --border-primary: rgba(16, 185, 129, 0.2);
+  --border-secondary: rgba(16, 185, 129, 0.1);
+  --border-accent: rgba(16, 185, 129, 0.3);
+  
+  /* Social Media Brand Colors (Desaturated) */
+  --color-github: #6e7681;
+  --color-linkedin: #0077b5;
+  --color-youtube: #ff0000;
+  --color-instagram: #e4405f;
+  --color-tiktok: #000000;
+  
+  /* Award Colors */
+  --color-gold: #ffd700;
+  --color-silver: #c0c0c0;
+  --color-bronze: #cd7f32;
+  
+  /* ============ SPACING SYSTEM ============ */
+  --spacing-xs: 0.5rem;      /* 8px */
+  --spacing-sm: 1rem;        /* 16px */
+  --spacing-md: 1.5rem;      /* 24px */
+  --spacing-lg: 2rem;        /* 32px */
+  --spacing-xl: 3rem;        /* 48px */
+  --spacing-2xl: 4rem;       /* 64px */
+  --spacing-3xl: 6rem;       /* 96px */
+  --spacing-4xl: 8rem;       /* 128px */
+  
+  /* ============ TYPOGRAPHY ============ */
+  
+  /* Font Families */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'Fira Code', 'Courier New', monospace;
+  
+  /* Font Sizes */
+  --font-xs: 0.75rem;        /* 12px */
+  --font-sm: 0.875rem;       /* 14px */
+  --font-base: 1rem;         /* 16px */
+  --font-lg: 1.125rem;       /* 18px */
+  --font-xl: 1.25rem;        /* 20px */
+  --font-2xl: 1.5rem;        /* 24px */
+  --font-3xl: 1.875rem;      /* 30px */
+  --font-4xl: 2.25rem;       /* 36px */
+  --font-5xl: 3rem;          /* 48px */
+  --font-6xl: 3.75rem;       /* 60px */
+  --font-7xl: 4.5rem;        /* 72px */
+  --font-8xl: 6rem;          /* 96px */
+  
+  /* Font Weights */
+  --weight-light: 300;
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+  --weight-black: 900;
+  
+  /* Line Heights */
+  --leading-none: 1;
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+  
+  /* Letter Spacing */
+  --tracking-tighter: -0.05em;
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
+  
+  /* ============ LAYOUT ============ */
+  
+  /* Container Widths */
+  --container-xs: 640px;
+  --container-sm: 768px;
+  --container-md: 1024px;
+  --container-lg: 1280px;
+  --container-xl: 1536px;
+  
+  /* Z-Index Layers */
+  --z-below: -1;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal-backdrop: 1000;
+  --z-modal: 1001;
+  --z-popover: 1002;
+  --z-toast: 1003;
+  
+  /* Border Radius */
+  --radius-sm: 0.25rem;      /* 4px */
+  --radius-md: 0.5rem;       /* 8px */
+  --radius-lg: 0.75rem;      /* 12px */
+  --radius-xl: 1rem;         /* 16px */
+  --radius-2xl: 1.5rem;      /* 24px */
+  --radius-full: 9999px;
+  
+  /* ============ TRANSITIONS ============ */
+  
+  /* Duration */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --duration-slower: 700ms;
+  
+  /* Easing Functions */
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+  /* ============ ANIMATIONS ============ */
+  
+  /* Animation Delays */
+  --delay-none: 0ms;
+  --delay-sm: 100ms;
+  --delay-md: 200ms;
+  --delay-lg: 300ms;
+  --delay-xl: 500ms;
+  
+  /* ============ BREAKPOINTS ============ */
+  /* Defined in responsive.css media queries */
+  /* Mobile: 320px - 767px */
+  /* Tablet: 768px - 1023px */
+  /* Desktop: 1024px+ */
+  
+  /* ============ EFFECTS ============ */
+  
+  /* Blur Values */
+  --blur-sm: 4px;
+  --blur-md: 8px;
+  --blur-lg: 16px;
+  --blur-xl: 24px;
+  
+  /* Opacity Values */
+  --opacity-0: 0;
+  --opacity-10: 0.1;
+  --opacity-20: 0.2;
+  --opacity-30: 0.3;
+  --opacity-40: 0.4;
+  --opacity-50: 0.5;
+  --opacity-60: 0.6;
+  --opacity-70: 0.7;
+  --opacity-80: 0.8;
+  --opacity-90: 0.9;
+  --opacity-100: 1;
+  
+  /* ============ NAVBAR ============ */
+  --navbar-height: 80px;
+  --navbar-height-mobile: 64px;
+  
+  /* ============ SECTION PADDING ============ */
+  --section-padding: var(--spacing-4xl);
+  --section-padding-mobile: var(--spacing-2xl);
+}
+
+/* ============ CUSTOM PROPERTIES FOR ANIMATIONS ============ */
+
+@property --gradient-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@property --glow-intensity {
+  syntax: '<number>';
+  initial-value: 0;
+  inherits: false;
+}

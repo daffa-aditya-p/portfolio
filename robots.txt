@@ -1,0 +1,41 @@
+# User-agent: *
+# Disallow: /
+
+# Sitemap
+Sitemap: https://yourdomain.com/sitemap.xml
+
+# Allow all
+User-agent: *
+Allow: /
+
+# Disallow certain paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /vendor/
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Crawl delay (optional)
+User-agent: *
+Crawl-delay: 10
+
+# Allow specific files
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /favicon.ico
+Allow: /robots.txt
+Allow: /sitemap.xml
